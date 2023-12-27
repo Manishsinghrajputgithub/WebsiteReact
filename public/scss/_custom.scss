@@ -1,0 +1,568 @@
+// Home
+
+// 1. Elements ------
+//    1.1) Base
+//    1.2) Button
+//    1.3) Proudct
+//    1.4) Tab
+//    1.5) Plugin
+
+// 2. Sections ------
+// 3. Responsive ------
+
+// 1. Elements ------
+// 1.1) Base
+.letter-spacing-large {
+    letter-spacing: .1em;
+}
+
+.font-size-normal {
+    font-size: 1.3rem;
+}
+
+.heading.heading-center {
+    .title,
+    p {
+        font-size: 3rem;
+        letter-spacing: -.01em;
+        line-height: 1.35;
+    }
+}
+
+.heading.heading-center p {
+    font-size: 1.4rem;
+}
+
+.cross-txt {
+    padding: 0 7rem;
+
+    &:before {
+        background: linear-gradient(270deg, #333, transparent);
+    }
+
+    &:after {
+        background: linear-gradient(90deg, #333, transparent);
+    }
+}
+
+// 1.2) Button
+.home-page .btn-dark {
+    padding: 1.2rem 2.4rem;
+    background-color: transparent;
+    border: .2rem solid transparent;
+    border-bottom-color: #333;
+    color: #333;
+    min-width: 130px;
+
+    &:hover {
+        color: #fff;
+        background-color: #333;
+        border-color: #333;
+        text-decoration: none !important;
+    }
+
+    &.btn-primary {
+        color: $primary-color;
+        border-bottom-color: $primary-color;
+
+        &:hover {
+            color: #fff;
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+}
+
+// 1.3) Proudct
+.widget-about p:last-of-type,
+.product.product-sm,
+.product.product-sm .ratings-container {
+    margin-bottom: 1.7rem;
+}
+
+.main.home-page {
+    .product {
+        background-color: #f9f9f9;
+        border: .1rem solid transparent;
+        transition: border .35s;
+
+        .product-media {
+            &::before {
+                padding-top: 136.1%;
+            }
+        }
+
+        &.product-list {
+            padding-bottom: 1rem;
+
+            .product-media:before {
+                padding-top: 125%;
+            }
+
+            .product-body {
+                padding-top: 2.5rem;
+                overflow: hidden;
+            }
+
+            .product-image-hover,
+            img {
+                height: 100%;
+            }
+        }
+
+        .product-cat a {
+            text-overflow: ellipsis;
+        }
+        
+        &:not(.product-sm):hover {
+            border-color: #ebebeb;
+            .product-footer {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .btn i {
+        font-size: 1.6rem;
+    }
+
+    > .banner {
+        background-position: left center;
+        min-height: 500px;
+        &:before {
+            display: block;
+            content: '';
+            width: 100%;
+            @include aspect-ratio(1903, 500);
+        }
+    
+        h6 {
+            margin-bottom: 3.3rem;
+            font-family: "PlayfairDisplay";
+            letter-spacing: 0;
+            line-height: 1.5;
+        }
+    
+        .banner-txt {
+            line-height: 1.9;
+            color: #666;
+        }
+    }
+}
+
+.home-page {
+    .product-price, 
+    .product-title {
+        letter-spacing: 0;
+    }
+
+    .product-title {
+        margin-bottom: 1.2rem;
+        line-height: 1.55;
+        font-weight: 500;
+    }
+
+    .ratings-container {
+        margin-bottom: 1.9rem;
+    }
+
+    .product-footer {
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .product .btn {
+        padding: .6rem 1.5rem;
+    }
+
+    .product-body {
+        padding: 1.6rem 1.6rem 4rem;
+    }
+
+    .btn-product-icon {
+        color:#333;
+        background-color: #fff;
+        border: .1rem solid #333;
+
+        &:hover {
+            color: #fff;
+            background-color: #333;
+        }
+    }
+
+    .product.product-sm {
+        .product-media {
+            flex: 0 0 120px;
+            max-width: 120px;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+// 1.4) Tab
+.home-page {
+    .nav.nav-pills {
+        .nav-link {
+            font-size: 1.3rem;
+            color: #999;
+            border: .1rem solid transparent;
+        }
+
+        .nav-item.show .nav-link,
+        .nav-item .nav-link.active {
+            color: #333;
+            border-color: #333;
+        }
+    }
+}
+
+// 1.5) Plugin
+.home-page {
+    .owl-carousel {
+        &.owl-dots-inside .owl-dots {
+            bottom: 95px;
+        }
+    
+        .owl-nav [class*='owl-'] {
+            top: 37.5%;
+        }
+    
+        .owl-nav .owl-prev {
+            left: -76px;
+        }
+    
+        .owl-nav .owl-next {
+            right: -76px;
+        }
+    
+        .owl-dots {
+            bottom: 4.5rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+} 
+
+.intro-slider-container {
+    .owl-theme .owl-dots .owl-dot {
+        &.active,
+        &:hover {
+            span {
+                border-color: #666;
+                background: #666;
+            }
+        }
+    
+        span {
+            border-color: #666;
+        }
+    }
+}
+
+.lookbook .owl-dots {
+    bottom: 4.5rem !important;
+    left: 50% !important;
+}
+
+// 2. Section
+// 2.1) Intro Section
+.intro-slide {
+    min-height: 680px;
+    height: 680px;
+}
+
+.intro-title {
+    margin: 1.3rem 0 .8rem -2px;
+}
+
+.intro-content {
+    transform: translateY(0);
+
+    .btn {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        min-width: 178px;
+    }
+}
+
+.intro-title,
+.intro-price {
+    font-family: "PlayfairDisplay";
+    font-size: 6rem;
+    letter-spacing: -.025em;
+}
+
+.intro-2 {
+    .intro-title {
+        line-height: 1.2;
+    }
+}
+
+// Banner Section
+.banner-content {
+    font-size: 1rem;
+    max-width: 400px;
+    width: 100%;
+
+    &.banner-content-right {
+        right: 7.5%;
+    }
+}
+
+.banner-txt,
+.title,
+.heading.heading-center p {
+    font-family: "PlayfairDisplay";
+}
+
+.home-page {
+    .banner-group {
+        .lazy-media:before {
+            padding-top: 128.2051282051%;
+        }
+    }
+
+    .banner-title,
+    .banner-price {
+        font-family: "PlayfairDisplay";
+        font-size: 4em;
+        letter-spacing: -.01em;
+        line-height: 1.2;
+    }
+
+    .banner-subtitle {
+        line-height: 1.3;
+    }
+    .banner-price {
+        line-height: 1.2;
+    }
+    
+    .banner-txt,
+    .title,
+    .heading.heading-center p {
+        font-size: 1.4rem;
+        line-height: 1.45;
+    }
+    
+    .banner-txt {
+        line-height: 1.4;
+    }
+    
+    .banner-middle:before {
+        content: '';
+        display: block;
+        width: 100%;
+        @include aspect-ratio(390, 500);
+    }
+}
+
+// Best Collection
+.seller .product {
+    background-color: #fff !important;
+
+    img {
+        filter: brightness(1.05);
+    }
+
+    .product-body {
+        background-color: #fff !important;
+    }
+}
+
+.home-page {
+    .icon-boxes {
+        border-top: .1rem solid #ebebeb;
+    }
+
+    .icon-box {
+        padding-bottom: 3.5rem;
+    }
+
+    .icon-box-icon {
+        font-size: 4.5rem;
+    }
+
+    .icon-box-title {
+        margin-bottom: .1rem;
+    }
+
+    .icon-box-content p {
+        line-height: 1.7;
+    }
+
+    .lookbook {
+        .banner-subtitle {
+            line-height: 1.5;
+        }
+        .banner.banner-overlay {
+            min-height: 500px;
+        }
+    }
+
+    .banner-dot {
+        & + .banner-dot {
+            margin-left: 1.8rem;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            display: block;
+            width: .5rem;
+            height: .5rem;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    }
+
+    .instagram-container .btn {
+        font-size: 1.2rem;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .instagram-feed {
+        height: auto;
+    }
+}
+
+.arrival {
+    .product-body {
+        margin-top: -1px;
+        z-index: 2;
+    }
+}
+
+.seller {
+    .product-media img {
+        filter: brightness(1.05);
+    }
+}
+
+.instagram-container {
+    padding-bottom: 5px;
+}
+
+// 3. Responsive
+@media (max-width: 1399px) {
+    .owl-nav {
+        display: none;
+    }
+}
+
+@include mq('md') {
+    .my-md-n5 {
+        margin-top: -5rem !important;
+        margin-bottom: -5rem !important;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@include mq('lg', 'max') {
+    .intro-1 {
+        background-position: 84% center;
+    }
+
+    .intro-2 {
+        background-position: 30% center;
+    }
+
+    .lookbook .banner-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+@include mq('md', 'max') {
+    .intro-title,
+    .intro-price {
+        font-size: 4rem;
+    }
+}
+
+@include mq('sm', 'max') {
+    .home-page {
+        .banner-content .banner-content-right {
+            right: 1%;
+        }
+
+        .banner-title {
+            font-size: 3em;
+        }
+
+        .btn {
+            font-size: 1rem;
+        }
+
+        .banner-txt {
+            font-size: 1.3rem;
+        }
+    }
+
+    .main.home-page > .banner {
+        min-height: 550px;
+    }
+
+    .home-page .banner-content.banner-content-right {
+        right: auto;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+@include mq('xs', 'max') {
+    .home-page {
+        .ratings-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ratings-text {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+
+        .product .btn {
+            min-width: auto;
+            padding-left: .3rem;
+            padding-right: .3rem;
+
+            i:first-child {
+                margin-right: 0;
+            }
+        }
+
+        .nav.nav-pills .nav-link {
+            font-size: 1rem;
+        }
+
+        .product.product-sm .ratings-container {
+            align-items: flex-start;
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .home-page .banner-content {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .home-page .banner-group [class*=col-]:nth-child(2) {
+        order: -1;
+        width: 100%;
+    }
+    
+    .home-page .banner-middle:before {
+        @include aspect-ratio(706, 500);
+    }
+}
